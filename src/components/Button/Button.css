@@ -1,0 +1,64 @@
+.ButtonComponent {
+    /*min-width: 194px;*/
+    /*min-height: 38px;*/
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.standard-button {
+    height: 38px;
+}
+
+.large-button {
+    min-width: 245px;
+    min-height: 50px;
+}
+
+.transparent-button {
+    border: solid 1px #f5f5f5;
+}
+
+.red-button {
+    background-color: #ee3029;
+}
+
+.inactive-button {
+    background-color: #4a4a4a;
+}
+
+.blue-button {
+    background-color: #2c358c;
+}
+
+.transparentRed-button {
+    border: solid 1px #ee3029;
+}
+
+.ButtonComponent .button-text {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+    color: #f4f4f4;
+    /*padding: 10px 20px;*/
+}
+
+.ButtonComponent .button-large-text {
+    font-size: 20px;
+    color: #f5f5f5;
+}
+
+.ButtonComponent .button-transparentRed-text {
+    color: #ee3029;
+}
+
+.orange-button {
+    border: solid 1px #f26922;
+}
+
+.ButtonComponent .button-orange-text {
+    color: #f26922;
+    font-size: 14px;
+
+}

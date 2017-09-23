@@ -1,0 +1,45 @@
+.ToggleButton {
+
+}
+
+
+.ToggleButton .toggle-options {
+    display: inline-flex;
+    flex-direction: row;
+    border: solid 1px #f26922;
+}
+
+.ToggleButton .toggle-options .option {
+    /*width: 70px;*/
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #ffffff;
+    width: 164px;
+}
+
+/*.ToggleButton .toggle-options .large-toggle {*/
+    /*width: 164px;*/
+/*}*/
+
+.ToggleButton .description-text {
+    height: 14px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: left;
+    color: #ffffff;
+    padding-top: 4px;
+
+}
+
+.ToggleButton .toggle-options :last-child {
+    border-left: solid 1px #f26922;
+}
+
+.ToggleButton .selected {
+    background-color: #f26922;
+
+}
