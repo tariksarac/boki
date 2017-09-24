@@ -3,8 +3,8 @@ import {SAVE_VIDEO_FAILURE, SAVE_VIDEO_SUCCESS, EDIT_VIDEO_SUCCESS, EDIT_VIDEO_F
 
 let initialState = {
     videos: [
-        { id: 0, name: 'Test Video', url: 'https://www.youtube.com/watch?v=ysz5S6PUM-U' },
-        ]
+        {id: 0, name: 'Test Video', url: 'https://www.youtube.com/watch?v=ysz5S6PUM-U'}
+    ]
 };
 
 export default function(state = initialState, action) {

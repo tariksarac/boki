@@ -37,17 +37,21 @@ class VideoControlItem extends Component {
         return (
             <div className="user-control">
                 <div className="control-item">
-                    <div className="play" onClick={() => { this.props.handlePlayButton(this.props.video); this.setState({ playVideo: !this.state.playVideo})} }>
-                        <img src={control}/><div className="video-name">{this.state.video.name}</div>
+                    <div className="play"
+                         onClick={() => { this.props.handlePlayButton(this.props.video); this.setState({ playVideo: !this.state.playVideo})} }>
+                        <img src={control} alt="play"/><div className="video-name">{this.state.video.name}</div>
                     </div>
                     { this.props.admin ?
                         <div className="play edit-icon" onClick={() => this.handleEditVideo()}>
-                            <img src={settings} />
+                            <img src={settings} alt="edit"/>
                         </div>
 
                         : null }
                 </div>
-                { this.state.showEdit ? <EditVideo editVideo={this.props.video} onClickAction={ this.props.editVideoInStore } closeEditing={this.handleEditVideo}/> : null }
+                { this.state.showEdit ? <EditVideo
+                    editVideo={this.props.video}
+                    onClickAction={ this.props.editVideoInStore }
+                    closeEditing={this.handleEditVideo}/> : null }
             </div>
         );
     }

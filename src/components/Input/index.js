@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-require('./Input.css')
+require('./Input.css');
 
 class Input extends Component {
     constructor(props, context) {
@@ -20,11 +20,6 @@ class Input extends Component {
         }
     }
 
-    // shouldComponentUpdate(nextProps) {
-    //
-    //     return nextProps.value!==this.state.value
-    // }
-
     handleValueChange(event) {
         this.setState({ value: event.target.value });
         this.props.onValueChange(event.target.value);
@@ -37,7 +32,6 @@ class Input extends Component {
                 <input
                     type={this.props.type}
                     placeholder={this.props.placeholderText}
-                    // ref={(input) => this.textInput = input}
                     value={this.state.value}
                     onChange={this.handleValueChange}
                 />

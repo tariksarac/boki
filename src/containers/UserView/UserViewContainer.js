@@ -1,15 +1,19 @@
 import { connect } from 'react-redux'
 import UserView from './UserView'
-import { addVideoToStore, editVideoInStore } from '../../actions/videoActions'
+import { editVideoInStore } from '../../actions/videoActions'
+import { changeUserRole } from '../../actions/userActions'
 import { bindActionCreators } from 'redux'
 
 
 const mapStateToProps = (state) => {
-    return { videos: state.videoData.videos };
+    return {
+        videos: state.videoData.videos,
+        isAdmin: state.user.isAdmin
+    };
 };
 
 const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({ addVideoToStore, editVideoInStore }, dispatch)
+    return bindActionCreators({ editVideoInStore, changeUserRole }, dispatch)
 };
 
 const UserViewContainer = connect(mapStateToProps, mapDispatchToProps)(UserView);

@@ -7,7 +7,7 @@ width: 800px;
 .ToggleButton .toggle-options {
     display: inline-flex;
     flex-direction: row;
-    border: solid 1px gray;
+    border: solid 1px goldenrod;
     width: 100%;
 }
 
@@ -22,10 +22,6 @@ width: 800px;
     width: 50%;
 }
 
-/*.ToggleButton .toggle-options .large-toggle {*/
-    /*width: 164px;*/
-/*}*/
-
 .ToggleButton .description-text {
     height: 14px;
     font-family: Roboto;
@@ -38,10 +34,10 @@ width: 800px;
 }
 
 .ToggleButton .toggle-options :last-child {
-    border-left: solid 1px gray;
+    border-left: solid 1px goldenrod;
 }
 
 .ToggleButton .selected {
-    background-color: gray;
+    background-color: goldenrod;
 
 }

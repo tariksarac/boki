@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux'
 import videoReducer from './videoReducer'
+import userReducer from './userReducer'
 
 const rootReducer = combineReducers({
     videoData: videoReducer,
-    // add your other reducers here
+    user: userReducer
 });
 
 export default rootReducer

@@ -1,18 +1,21 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Input from '../../components/Input'
 
-class EditVideoItem extends Component {
-    render() {
+const EditVideoItem = (props) => {
         return (
             <div className="admin-control-item">
-                <Input type="text" label={this.props.label} onValueChange={this.props.handleItemChange} value={this.props.value}/>
+                <Input type="text" label={props.label} onValueChange={props.handleItemChange} value={props.value}/>
             </div>
         );
-    }
-}
 
-EditVideoItem.propTypes = {};
-EditVideoItem.defaultProps = {};
+};
+
+EditVideoItem.propTypes = {
+    handleItemChange: PropTypes.func
+};
+EditVideoItem.defaultProps = {
+    handleItemChange: () => {}
+};
 
 export default EditVideoItem;

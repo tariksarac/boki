@@ -4,13 +4,13 @@ import ReactPlayer from 'react-player'
 import VideoControls from '../../components/VideoControls'
 import Button from '../../components/Button'
 
-require('./UserView.css')
+require('./UserView.css');
 class App extends Component {
     constructor(props){
         super(props);
 
         this.state = {
-            adminUser: false,
+            adminUser: this.props.isAdmin,
             selectedVideo: this.props.videos[0],
             editVideo: null
         };
@@ -21,6 +21,7 @@ class App extends Component {
 
     handleUser(){
         this.setState({ adminUser: !this.state.adminUser })
+        this.props.changeUserRole()
     }
 
     handlePlayButton(file){
@@ -30,7 +31,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Toggle onClickAction={this.handleUser}/>
+                <Toggle onClickAction={this.handleUser} selectedOption={ this.state.adminUser ? 1 : 0 }/>
                 <div className="presentation-container">
                     <VideoBox selectedVideo={ this.state.selectedVideo }/>
                     <VideoControls
@@ -40,7 +41,11 @@ class App extends Component {
                         editVideoInStore={this.props.editVideoInStore}
                         selected={this.state.selectedVideo.id}
                     />
-                    { this.state.adminUser ? <Button buttonText={'ADD NEW VIDEO'} onClickActions={() => this.props.history.push('/admin')}/> : null }
+                    { this.state.adminUser ?
+                        <Button
+                            gray
+                            buttonText={'ADD NEW VIDEO'}
+                            onClickActions={() => this.props.history.push('/admin')}/> : null }
                 </div>
             </div>
         );
@@ -60,14 +65,3 @@ const VideoBox = (props) => {
     )
 };
 
-
-
-// const AdminControl = (props) => {
-//     return (
-//         <div className="admin-container">
-//             <div className="admin-control-description">Admin Panel</div>
-//             {props.children}
-//         </div>
-//     )
-// };
-//

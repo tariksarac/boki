@@ -18,7 +18,3 @@ export function sortData(data) {
         }
     )
 }
-
-// let sortedData = this.props.videos.sort(function (a, b) {
-//     return a.id - b.id;
-// });

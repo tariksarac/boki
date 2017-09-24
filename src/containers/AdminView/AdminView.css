@@ -15,6 +15,9 @@
 .admin-container .admin-control-description {
     text-align: center;
     padding-bottom: 20px;
+    font-size: 26px;
+    font-family: sans-serif;
+    font-weight: 600;
 }
 
 .admin-container .admin-control-item {

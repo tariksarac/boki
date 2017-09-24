@@ -33,9 +33,17 @@ class EditVideo extends Component {
                     label={'Enter Name'}
                     handleItemChange={ (newValue) => this.setState({ name: newValue}) }/>
                 <div className="admin-control-button">
-                    <Button buttonText={'Save'} standard
-                            onClickActions={() => {this.props.onClickAction({ id: this.props.editVideo ? this.props.editVideo.id : getNewId() , url: this.state.url, name: this.state.name });
-                                this.props.closeEditing ? this.props.closeEditing() : null} }
+                    <Button buttonText={'Save'} standard gray
+                            onClickActions={() => {
+                                this.props.onClickAction(
+                                    {
+                                        id: this.props.editVideo ? this.props.editVideo.id : getNewId(),
+                                        url: this.state.url,
+                                        name: this.state.name
+                                    }
+                                );this.props.closeEditing()
+                                }
+                            }
 
                     />
                 </div>
@@ -44,7 +52,11 @@ class EditVideo extends Component {
     }
 }
 
-EditVideo.propTypes = {};
-EditVideo.defaultProps = {};
+EditVideo.propTypes = {
+    closeEditing: PropTypes.func
+};
+EditVideo.defaultProps = {
+    closeEditing: () => { }
+};
 
 export default EditVideo;

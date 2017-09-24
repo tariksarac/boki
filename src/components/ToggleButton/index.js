@@ -9,7 +9,7 @@ class ToggleButton extends React.Component {
         super(props);
 
         this.state = {
-            selectedOption: 0
+            selectedOption: this.props.selectedOption
         };
 
         this.getOptions = this.getOptions.bind(this)
@@ -47,15 +47,11 @@ class ToggleButton extends React.Component {
 
 ToggleButton.propTypes = {
     onClickAction: PropTypes.func,
-    // optionOneText: PropTypes.string,
-    // optionTwoText: PropTypes.string,
     selectedOption: PropTypes.number,
 };
 
 ToggleButton.defaultProps = {
     onClickAction: () => { },
-    // optionOneText: 'optionOne',
-    // optionTwoText: 'optionTwo',
     selectedOption: null,
 };
 

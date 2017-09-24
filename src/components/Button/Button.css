@@ -1,6 +1,4 @@
 .ButtonComponent {
-    /*min-width: 194px;*/
-    /*min-height: 38px;*/
     border-radius: 3px;
     display: flex;
     justify-content: center;
@@ -9,7 +7,9 @@
 }
 
 .standard-button {
-    height: 38px;
+    width: 100px!important;
+    height: 30px!important;
+    background-color: darkcyan!important;
 }
 
 .large-button {
@@ -18,23 +18,20 @@
 }
 
 .transparent-button {
-    border: solid 1px #f5f5f5;
+    width: 250px;
+    height: 60px;
+}
+
+.gray-button {
+    background-color: goldenrod;
+    width: 200px;
+    height: 40px;
 }
 
 .red-button {
-    background-color: #ee3029;
-}
-
-.inactive-button {
-    background-color: #4a4a4a;
-}
-
-.blue-button {
-    background-color: #2c358c;
-}
-
-.transparentRed-button {
-    border: solid 1px #ee3029;
+    background-color: brown;
+    width: 40px;
+    height: 20px;
 }
 
 .ButtonComponent .button-text {
@@ -49,16 +46,7 @@
     color: #f5f5f5;
 }
 
-.ButtonComponent .button-transparentRed-text {
-    color: #ee3029;
-}
-
-.orange-button {
-    border: solid 1px #f26922;
-}
-
-.ButtonComponent .button-orange-text {
-    color: #f26922;
-    font-size: 14px;
-
+.ButtonComponent .button-red-text {
+    font-size: 12px;
+    color: #f5f5f5;
 }

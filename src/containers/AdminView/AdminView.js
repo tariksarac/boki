@@ -16,7 +16,7 @@ class AdminView extends React.Component {
     render(){
         return (
             <div>
-                <Button buttonText={'Go back'} onClickActions={() => this.props.history.goBack()}/>
+                <Button buttonText={'Go back'} transparent large onClickActions={() => this.props.history.goBack()}/>
 
                 <div className="admin-container">
                     <div className="admin-control-description">List of videos</div>
@@ -31,27 +31,9 @@ class AdminView extends React.Component {
                         onClickAction={this.props.addVideoToStore}/>
                 </div>
             </div>
-
-
-
-            // <AdminControl>
-            //     <EditVideo
-            //         editVideo={this.state.editVideo}
-            //         onClickAction={this.props.addVideoToStore}/>
-            // </AdminControl>
         )
     }
 
 }
 
 export default AdminView
-
-const AdminControl = (props) => {
-    return (
-        <div className="admin-container">
-            <VideoList />
-            <div className="admin-control-description">Add new video</div>
-            {props.children}
-        </div>
-    )
-};

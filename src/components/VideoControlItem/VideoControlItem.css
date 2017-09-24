@@ -14,7 +14,7 @@
     padding-bottom: 20px;
 }
 
-.user-control .control-item .edit-icon{
+.user-control .control-item .edit-icon {
     justify-content: flex-end;
 }
 
@@ -31,7 +31,7 @@
     padding-left: 20px;
 }
 
-.user-control .control-item .play img{
+.user-control .control-item .play img {
     max-width: 40px;
     height: auto;
 }
