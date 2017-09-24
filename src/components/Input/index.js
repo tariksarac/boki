@@ -8,29 +8,29 @@ class Input extends Component {
         super(props, context);
 
         this.state = {
-            value: ''
+            value: this.props.value
         };
 
         this.handleValueChange = this.handleValueChange.bind(this);
     }
 
     componentWillReceiveProps(nextProps){
-        console.log('nextprops', nextProps)
         if(nextProps.value && nextProps.value.length > 0){
-            console.log('ulazi')
             this.setState({ value: nextProps.value})
         }
     }
 
+    // shouldComponentUpdate(nextProps) {
+    //
+    //     return nextProps.value!==this.state.value
+    // }
+
     handleValueChange(event) {
-        console.log('ulazi i ovdjr')
         this.setState({ value: event.target.value });
         this.props.onValueChange(event.target.value);
     }
 
     render() {
-        console.log(this.props)
-        console.log(this.state)
         return (
             <div className="input-container">
                <label>{this.props.label}</label>

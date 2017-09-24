@@ -1,0 +1,37 @@
+.user-control {
+    border: 1px solid white;
+    padding:20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.user-control .control-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.user-control .control-item .edit-icon{
+    justify-content: flex-end;
+}
+
+.user-control .control-item .play {
+    width: 240px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-control .control-item .play .video-name {
+    padding-left: 20px;
+}
+
+.user-control .control-item .play img{
+    max-width: 40px;
+    height: auto;
+}

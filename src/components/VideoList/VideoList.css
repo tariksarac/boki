@@ -1,0 +1,14 @@
+.list-videos {
+    padding: 10px 160px 10px 160px;
+    margin-bottom: 30px;
+}
+
+
+.list-videos .list-item {
+    border-bottom: 1px solid white;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,12 +1,14 @@
 .ToggleButton {
-
+width: 800px;
+    margin: 0 auto;
 }
 
 
 .ToggleButton .toggle-options {
     display: inline-flex;
     flex-direction: row;
-    border: solid 1px #f26922;
+    border: solid 1px gray;
+    width: 100%;
 }
 
 .ToggleButton .toggle-options .option {
@@ -17,7 +19,7 @@
     align-items: center;
     font-size: 16px;
     color: #ffffff;
-    width: 164px;
+    width: 50%;
 }
 
 /*.ToggleButton .toggle-options .large-toggle {*/
@@ -36,10 +38,10 @@
 }
 
 .ToggleButton .toggle-options :last-child {
-    border-left: solid 1px #f26922;
+    border-left: solid 1px gray;
 }
 
 .ToggleButton .selected {
-    background-color: #f26922;
+    background-color: gray;
 
 }
